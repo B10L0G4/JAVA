@@ -20,5 +20,11 @@ O enfoque é nos objetos e nas operações que o programa precisa realizar sobre
 > Conceitos 
 > - Objeto
 > - Classe 
+ 
+
+> Exemplo de projeto olá mundo  
+> Primeiro exemplo ( objeto )
+>   exibe mensagem em tela ( operação )
+> classe PrimeiroExemplo - 
 
 
