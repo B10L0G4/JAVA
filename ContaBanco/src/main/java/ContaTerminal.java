@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CintaTerminal {
+public class ContaTerminal {
     public static void main(String[] args) {
 
         int number;
