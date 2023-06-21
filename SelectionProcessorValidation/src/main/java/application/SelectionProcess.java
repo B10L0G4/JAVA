@@ -1,5 +1,6 @@
 package application;
 
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class SelectionProcess {
@@ -26,20 +27,37 @@ public class SelectionProcess {
                 System.out.println("Candidate: " + candidate + " Intended Salary: " + intendedSalary);
                 System.out.println("Call the candidate for an interview");
                 selectedCandidates++;
+
+                int tentativesContact = 0;
+                boolean contactContinue = true;
+                boolean contactOk = false;
+                do {
+                    contactOk = candidatePhone();
+                    if (contactContinue) {
+                        tentativesContact++;
+                    }
+
+                } while (contactContinue && tentativesContact < 3);
+                if (contactOk) {
+                    System.out.println("Interview scheduled "+ candidate + " na " + tentativesContact + " tentative successful\n");
+                } else {
+                    System.out.println("Interview canceled "+ candidate + " na " + tentativesContact + " tentative unsuccessful\n");
+                }
             }
             ActualCandidates++;
+
+
         }
 
     }
-
+    static boolean candidatePhone() {
+        return new Random().nextInt(3)==1;
+    }
     static double salaryClaim() {
         return ThreadLocalRandom.current().nextDouble(1800.00, 2200.00);
     }
 }
-//    static double candidatePhone() {
-//        return ThreadLocalRandom.current().nextDouble(1800.00, 2200.00);
-//    }
-//}
+
 //     public static void analyzeCandidates(double intendedSalary) {
 //            double salary = 2000.00;
 //            if (salary > intendedSalary) {
