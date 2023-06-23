@@ -23,7 +23,7 @@ public class Contador {
         }
         static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
             if (parametroUm == parametroDois) {
-                System.out.println("Parâmetros inválidos");
+                System.out.println("Os parâmetros não podem ser iguais");
             }
 
 
