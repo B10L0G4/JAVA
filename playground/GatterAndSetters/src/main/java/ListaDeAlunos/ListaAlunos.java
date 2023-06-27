@@ -5,9 +5,12 @@ public class ListaAlunos {
     public static void main(String[] args) {
         Aluno Van = new Aluno();
 
-        Van.nome = "Vanessa";
-        Van.idade = 20;
+        Van.setNome("Vanessa");
+        Van.setIdade(20);
 
-        System.out.println("A aluna" + Van.nome + "tem" + Van.idade + "anos");
+        System.out.println("A aluna " + Van.getNome() + " tem " + Van.getIdade() + " anos");
     }
 }
+
+// get é responsavél por pegar o valor de uma variavel e deve ser usado em conjunto com o set e deve ser public
+// set é responsavél por setar o valor de uma variavel e deve ser usado em conjunto com o get e deve ser public
