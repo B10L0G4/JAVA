@@ -1,4 +1,4 @@
-package ListaDeAlunos;
+package ListaDeAlunosModeloGetSet;
 
 public class ListaAlunos {
 

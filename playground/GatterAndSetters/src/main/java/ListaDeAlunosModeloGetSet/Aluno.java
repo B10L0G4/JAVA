@@ -1,4 +1,4 @@
-package ListaDeAlunos;
+package ListaDeAlunosModeloGetSet;
 
 public class Aluno {
     private String nome; // private é responsavél por deixar a variavel privada e só pode ser acessada por metodos publicos
