@@ -6,7 +6,7 @@ public class UsuarioModelo {
     public static void main(String[] args) {
 
         // Abrir Mensagem
-        MessengerModel msn = new MessengerModel();
+        SistemaDeMensagemFirst msn = new SistemaDeMensagemFirst();
         SistemaDeMensagemSecond Facebook = new SistemaDeMensagemSecond();
         SistemaDeMensagemThird Instagram = new SistemaDeMensagemThird();
 
