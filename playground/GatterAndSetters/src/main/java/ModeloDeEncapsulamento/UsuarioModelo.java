@@ -7,11 +7,18 @@ public class UsuarioModelo {
 
         // Abrir Mensagem
         MessengerModel msn = new MessengerModel();
+        SistemaDeMensagemSecond Facebook = new SistemaDeMensagemSecond();
+        SistemaDeMensagemThird Instagram = new SistemaDeMensagemThird();
 
-        // Enviar Mensagem
+        // Usuario X testando sistemas de comunicações diferentes utilizando encapsulamento e herança
         msn.enviarMensagem();
-        // Receber Mensagem
         msn.receberMensagem();
+
+        Facebook.enviarMensagem();
+        Facebook.receberMensagem();
+
+        Instagram.enviarMensagem();
+        Instagram.receberMensagem();
     }
 
 
