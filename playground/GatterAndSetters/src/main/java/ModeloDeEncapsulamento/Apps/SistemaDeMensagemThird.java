@@ -1,12 +1,15 @@
-package ModeloDeEncapsulamento;
+package ModeloDeEncapsulamento.Apps;
 
 import java.util.logging.Logger;
 
-public class SistemaDeMensagemThird extends SistemaDeMensagemFirst {
+public class SistemaDeMensagemThird extends PadraoSistemaDeMensagem {
 
     @Override
     public void enviarMensagem() {
-        System.out.println("Enviando mensagem pelo Instagram");
+        Logger log = Logger.getLogger("Instagran Logger");
+        log.info(validarconexao() + " Loggers não visualizada pelo usuario");
+
+
     }
 
     @Override
@@ -18,7 +21,7 @@ public class SistemaDeMensagemThird extends SistemaDeMensagemFirst {
 
 
     private void salvarHistorico () {
-        Logger log = Logger.getLogger("SistemaDeMensagemThird");
+        Logger log = Logger.getLogger("Instagran Logger");
         log.info("Salvando Histórico de conversas");
     }
 }

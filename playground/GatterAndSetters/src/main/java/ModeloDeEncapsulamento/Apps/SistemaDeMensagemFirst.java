@@ -1,7 +1,9 @@
-package ModeloDeEncapsulamento;
+package ModeloDeEncapsulamento.Apps;
 
 
-public class SistemaDeMensagemFirst extends PadraoSistemaDeMensagem{
+import ModeloDeEncapsulamento.Apps.PadraoSistemaDeMensagem;
+
+public class SistemaDeMensagemFirst extends PadraoSistemaDeMensagem {
 
     @Override
     public void enviarMensagem() {
@@ -15,9 +17,7 @@ public class SistemaDeMensagemFirst extends PadraoSistemaDeMensagem{
         salvarHistorico();
     }
 
-    private void validarconexao () {
-        System.out.println("Validando Conexão com a internet ...");
-    }
+
     private void salvarHistorico () {
         System.out.println("Salvando Histórico de conversas");
     }

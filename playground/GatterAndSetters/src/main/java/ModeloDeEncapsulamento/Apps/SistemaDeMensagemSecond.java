@@ -1,9 +1,10 @@
-package ModeloDeEncapsulamento;
+package ModeloDeEncapsulamento.Apps;
 
-public class SistemaDeMensagemSecond extends SistemaDeMensagemFirst {
+public class SistemaDeMensagemSecond extends PadraoSistemaDeMensagem {
 
     @Override
     public void enviarMensagem() {
+        validarconexao();
         System.out.println("Enviando mensagem pelo Facebook");
     }
 
