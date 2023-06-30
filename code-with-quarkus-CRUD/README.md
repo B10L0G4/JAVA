@@ -31,6 +31,18 @@ If you want to build an _über-jar_, execute the following command:
 
 The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
 
+
+## Adding a dependency
+
+To add a dependency to your project, you can use the `add-extension` goal, for example:
+```shell script
+./mvnw quarkus:add-extension -Dextensions="extension name"
+```
+`list of extensions`: https://quarkus.io/guides/all-extensions or
+```shell script
+./mvnw quarkus:list-extensions
+```
+
 ## Creating a native executable
 
 You can create a native executable using: 
@@ -60,3 +72,23 @@ If you want to learn more about building native executables, please consult http
 Easily start your Reactive RESTful Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+
+### Conteiner Image - Docker
+
+Build a container image and run it directly in Docker
+
+```shell script
+docker run --network host -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test -d --rm mysql:8:0:19
+```
+
+```shell script
+docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
+```
+
+- `docker run` - to run the container
+- `--network host` - to run the container in the same network as the host
+- `-e MYSQL_ROOT_PASSWORD=root` - to set the root password
+- `-e MYSQL_DATABASE=test` - to create a database
+- `-d` - to run the container in the background
+- `--rm` - to remove the container when it stops
+- `mysql:8.0.19` - the image to use
