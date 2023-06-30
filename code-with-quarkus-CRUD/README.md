@@ -78,7 +78,7 @@ Easily start your Reactive RESTful Web Services
 Build a container image and run it directly in Docker
 
 ```shell script
-docker run --network host -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test -d --rm mysql:8:0:19
+docker run --network host -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test -d --rm mysql:8.0.19
 ```
 
 ```shell script
