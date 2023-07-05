@@ -1,7 +1,10 @@
-import Curso.Aulas;
-import Curso.Mentoria;
+import Curso.*;
 
+import java.lang.reflect.Array;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,5 +33,18 @@ public class Main {
         mentoriaPython.setTitulo("Orientação de Python");
         mentoriaPython.setDescricao("Conceitos de Basicos Python ");
         mentoriaPython.setData(LocalDateTime.now());
+
+        BootCamp bootCamp = new BootCamp();
+        bootCamp.setNome("BootCamp Java Developer");
+        bootCamp.setDataInicio(LocalDate.now());
+        bootCamp.setDataFim(LocalDate.now().plusDays(45));
+        List<Conteudo> conteudos = Arrays.asList(aulasJava, aulasJavaIntermediario,mentoriaJava);
+        bootCamp.setConteudos(conteudos);
+
+        Dev Sonic = new Dev();
+        Sonic.setNome("Sonic");
+        Sonic.setConteudosInscritos(conteudos);
+
+
     }
 }
