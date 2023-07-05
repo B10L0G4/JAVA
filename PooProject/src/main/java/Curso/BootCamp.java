@@ -1,16 +1,17 @@
 package Curso;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BootCamp {
 
     private String nome;
-    private List<Dev> devs;
-
-    private List<Conteudo> conteudos;
-
     private LocalDate dataInicio;
+    private LocalDate dataFim;
+    private List<Dev> devs = new ArrayList<>();
+    private List<Conteudo> conteudos = new ArrayList<>();
+
 
     public String getNome() {
         return nome;
@@ -52,5 +53,4 @@ public class BootCamp {
         this.dataFim = dataFim;
     }
 
-    private LocalDate dataFim;
 }
