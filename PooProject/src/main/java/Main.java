@@ -51,7 +51,6 @@ public class Main {
         Dev Amy = new Dev();
         Amy.setNome("Amy");
 
-
         Sonic.inscrever(aulasPython);
         Sonic.inscrever(mentoriaPython);
 
@@ -76,10 +75,5 @@ public class Main {
             System.out.println(dev.getNome());
             System.out.println(dev.calcularTotalXp());
         }
-
-
-
-
-
     }
 }
