@@ -1,14 +1,20 @@
 package nos;
-public class encadeamentoDeNos {
+public class encadeamentoDeNos <T{
 
-        private String conteudo;
-        private encadeamentoDeNos proximoNo;
+        private T conteudo;
 
-    public String getConteudo() {
+        private encadeamentoDeNos<T> proximoNo;
+        // o <T> é um tipo genérico, que pode ser qualquer tipo de dado
+    public encadeamentoDeNos(T conteudo) {
+        this.proximoNo = null;
+        this.conteudo = conteudo;
+
+    }
+    public T getConteudo() {
         return conteudo;
     }
 
-    public void setConteudo(String conteudo) {
+    public void setConteudo(T conteudo) {
         this.conteudo = conteudo;
     }
 
@@ -27,9 +33,5 @@ public class encadeamentoDeNos {
                 '}';
     }
 
-    public encadeamentoDeNos(String conteudo) {
-        this.proximoNo = null;
-        this.conteudo = conteudo;
 
-    }
 }
