@@ -1,3 +1,4 @@
+package nos;
 public class encadeamentoDeNos {
 
         private String conteudo;

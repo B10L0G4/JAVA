@@ -1,3 +1,5 @@
+package nos;
+
 public class NoMain {
     public static void main(String[] args) {
 
