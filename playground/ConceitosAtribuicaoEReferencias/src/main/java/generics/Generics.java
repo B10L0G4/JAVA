@@ -9,33 +9,36 @@ public class Generics {
 
     // unbounded wildcard
     // upper bounded wildcard
-    public void imprimirLista(List<?> lista) {
-        for (Object o : lista) {
-            System.out.println(o);
-        }
-    } // funciona com qualquer tipo de dado
 
-    List<Aluno> minhaLista = new List<>();
-    minhaLista.add(new
 
-    Aluno("João"));
+    // ----------------------------------------//
+//    public void imprimirLista(List<?> lista) {
+//        for (Object o : lista) {
+//            System.out.println(o);
+//        }
+//    } // funciona com qualquer tipo de dado
+//
+//    List<Aluno> minhaLista = new List<>();
+//    minhaLista.add(new
+//
+//    Aluno("João"));
 
 
 // upperbounded wildcard
 
-    public void imprimirLista(List<? extends Aluno> listaAlunos) {
-        for (Aluno a : listaAlunos) {
-            System.out.println(a);
-        }
-    } // funciona com classes que herdam de Aluno
+//    public void imprimirLista(List<? extends Aluno> listaAlunos) {
+//        for (Aluno a : listaAlunos) {
+//            System.out.println(a);
+//        }
+//    } // funciona com classes que herdam de Aluno
 
 // lowerbounded wildcard
 
-    public void imprimirLista(List<? super Aluno> listaAlunos) {
-        for (Object o : listaAlunos) {
-            System.out.println(o);
-        }
-    } // funciona com classes que são superclasses de Aluno
+//    public void imprimirLista(List<? super Aluno> listaAlunos) {
+//        for (Object o : listaAlunos) {
+//            System.out.println(o);
+//        }
+//    } // funciona com classes que são superclasses de Aluno
 
 
 }
