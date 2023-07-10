@@ -1,4 +1,4 @@
-package stackExemplo;
+package stackExemploLifo;
 
 public class noDapilha {
 

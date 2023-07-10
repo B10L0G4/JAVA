@@ -1,4 +1,4 @@
-package stackExemplo;
+package stackExemploLifo;
 
 public class pilha {
     private noDapilha refEntradaPilha; // top of stack
@@ -12,16 +12,17 @@ public class pilha {
         refEntradaPilha.setReNew(refAuxiliar); // o novo nó aponta para o antigo topo da pilha
     }
     public noDapilha pop(){ // remove o item do topo da pilha
-        if (this.isEmpty()){ // se a pilha estiver vazia
+        if (!isEmpty()){ // se a pilha estiver vazia
             noDapilha noPoped = refEntradaPilha; // cria uma referencia para o topo da pilha
             refEntradaPilha = refEntradaPilha.getReNew(); // o topo da pilha recebe o nó abaixo dele
             return noPoped;// retorna o nó que foi removido
         }
-        return null; // stack is empty
+        return null;
     }
     public noDapilha top(){ // retorna o item do topo da pilha
         return refEntradaPilha; // retorna o topo da pilha
     }
+
     public boolean isEmpty(){
         return refEntradaPilha == null ? true : false; // stack is empty
     }
@@ -42,7 +43,8 @@ public class pilha {
                 break; // para o loop
             }
         }
-        return stringRetorno += "================\n"; // retorna a pilha
 
+        stringRetorno += "================\n";  // cria uma string para retornar a pilha
+        return stringRetorno; // retorna a pilha
     }
 }
