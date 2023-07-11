@@ -7,12 +7,15 @@ public class fila {
         this.refNoDaFilaEntrada = null;
     } // definie o nó de entrada como nulo
 
-    public void enqueue(noDaFila novoNo){ // Emfileirar
+    public void enqueue(Object obj){ // Emfileirar
+        noDaFila novoNo = new noDaFila(obj); // Cria um novo nó
+
         novoNo.setRefNoDaFila(refNoDaFilaEntrada); // O novo nó aponta para o nó que está na entrada da fila
         refNoDaFilaEntrada = novoNo; // O nó que está na entrada da fila passa a ser o novo nó
     }
-    public noDaFila first(){ // retorna o primeiro nó da fila
+    public Object first(){ // retorna o primeiro nó da fila
         if (!this.isEmpty()){
+
             noDaFila primeiroNo = refNoDaFilaEntrada; // Cria um nó auxiliar que recebe o nó que está na entrada da fila
             while(true){//faz um loop infinito até chegar ao primeiro da fila
                 if(primeiroNo.getRefNoDaFila() != null){//verifica se o nó auxiliar não é nulo
@@ -22,11 +25,11 @@ public class fila {
                     break; // sai do loop
                 }
             }
-            return primeiroNo;
+            return primeiroNo.getObject();
         }
         return null;
     }
-    public noDaFila dequeue (){
+    public Object dequeue (){
         if (!this.isEmpty()){
             noDaFila primeiroNo = refNoDaFilaEntrada; // primeiroNo recebe o nó que está na entrada da fila
             noDaFila noAuxiliar = refNoDaFilaEntrada; // Cria um nó auxiliar que recebe o nó que está na entrada da fila
@@ -39,7 +42,7 @@ public class fila {
                     break; // sai do loop
                 }
             }
-            return primeiroNo;
+            return primeiroNo.getObject();
         }
         return null;
     }

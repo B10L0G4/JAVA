@@ -4,10 +4,10 @@ public class Main {
     public static void main(String[] args) {
         fila minhaFila = new fila();
 
-        minhaFila.enqueue(new noDaFila("Primeiro"));
-        minhaFila.enqueue(new noDaFila("Segundo"));
-        minhaFila.enqueue(new noDaFila("Terceiro"));
-        minhaFila.enqueue(new noDaFila("Quarto"));
+        minhaFila.enqueue("Primeiro");
+        minhaFila.enqueue("Segundo");
+        minhaFila.enqueue("Terceiro");
+        minhaFila.enqueue("Quarto");
 
         System.out.println(minhaFila + "\n");
 
