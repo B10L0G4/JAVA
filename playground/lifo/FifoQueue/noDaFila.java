@@ -29,4 +29,6 @@ public class noDaFila {
     }
 
 
+    public String getObject() {
+    }
 }
