@@ -1,19 +1,19 @@
 package FifoQueue;
 
-public class fila {
-    private noDaFila refNoDaFilaEntrada;
+public class fila<T> {
+    private noDaFila<T> refNoDaFilaEntrada;
 
     public fila() {
         this.refNoDaFilaEntrada = null;
     } // definie o nó de entrada como nulo
 
-    public void enqueue(Object obj){ // Emfileirar
-        noDaFila novoNo = new noDaFila(obj); // Cria um novo nó
+    public void enqueue(T object){ // Emfileirar
+        noDaFila novoNo = new noDaFila(object); // Cria um novo nó
 
         novoNo.setRefNoDaFila(refNoDaFilaEntrada); // O novo nó aponta para o nó que está na entrada da fila
         refNoDaFilaEntrada = novoNo; // O nó que está na entrada da fila passa a ser o novo nó
     }
-    public Object first(){ // retorna o primeiro nó da fila
+    public T first(){ // retorna o primeiro nó da fila -- refactoring alterando a entrada do método para Object, assim não é necessário fazer um cast
         if (!this.isEmpty()){
 
             noDaFila primeiroNo = refNoDaFilaEntrada; // Cria um nó auxiliar que recebe o nó que está na entrada da fila
@@ -25,11 +25,11 @@ public class fila {
                     break; // sai do loop
                 }
             }
-            return primeiroNo.getObject();
+            return (T) primeiroNo.getObject();
         }
         return null;
     }
-    public Object dequeue (){
+    public T dequeue (){
         if (!this.isEmpty()){
             noDaFila primeiroNo = refNoDaFilaEntrada; // primeiroNo recebe o nó que está na entrada da fila
             noDaFila noAuxiliar = refNoDaFilaEntrada; // Cria um nó auxiliar que recebe o nó que está na entrada da fila
@@ -42,7 +42,7 @@ public class fila {
                     break; // sai do loop
                 }
             }
-            return primeiroNo.getObject();
+            return (T)primeiroNo.getObject();
         }
         return null;
     }

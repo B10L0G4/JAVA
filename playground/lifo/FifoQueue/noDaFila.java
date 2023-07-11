@@ -1,14 +1,14 @@
 package FifoQueue;
 
-public class noDaFila {
-    private Object object;
-    private noDaFila refNoDaFila;
+public class noDaFila<T> {
+    private T object;
+    private noDaFila<T> refNoDaFila;
 
     public noDaFila() {
 
     }
 
-    public noDaFila(Object onject) {
+    public noDaFila(T onject) {
         this.object = onject;
         this.refNoDaFila = null;
     }

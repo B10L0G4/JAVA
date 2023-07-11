@@ -2,7 +2,7 @@ package FifoQueue;
 
 public class Main {
     public static void main(String[] args) {
-        fila minhaFila = new fila();
+        fila <String>minhaFila = new fila();
 
         minhaFila.enqueue("Primeiro");
         minhaFila.enqueue("Segundo");
@@ -15,7 +15,7 @@ public class Main {
 
         System.out.println(minhaFila);
 
-        minhaFila.enqueue(new noDaFila("Último"));
+        minhaFila.enqueue("Último");
 
         System.out.println(minhaFila + "\n");
 
