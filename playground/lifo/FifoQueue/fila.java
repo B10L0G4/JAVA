@@ -17,8 +17,12 @@ public class fila {
             while(true){//faz um loop infinito até chegar ao primeiro da fila
                 if(primeiroNo.getRefNoDaFila() != null){//verifica se o nó auxiliar não é nulo
                     primeiroNo = primeiroNo.getRefNoDaFila();//se não for nulo, o nó auxiliar recebe o próximo nó
+
+                }else {
+                    break; // sai do loop
                 }
             }
+            return primeiroNo;
         }
         return null;
     }

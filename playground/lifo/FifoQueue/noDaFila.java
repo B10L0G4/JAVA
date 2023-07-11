@@ -13,6 +13,10 @@ public class noDaFila {
         this.refNoDaFila = null;
     }
 
+    public Object getObject() {
+        return object;
+    }
+
     public noDaFila getRefNoDaFila() {
         return refNoDaFila;
     }
@@ -29,6 +33,5 @@ public class noDaFila {
     }
 
 
-    public String getObject() {
-    }
+
 }
