@@ -76,4 +76,20 @@ public class ListaEncadeada<T> {
         return refEntrada == null ? true : false;
     }
 
+    // o metodo toString() é um metodo que retorna uma string que representa o objeto
+    // e serve para facilitar a visualização do objeto
+
+
+    @Override
+    public String toString() {
+        String  strRetorno = "";
+        noDaLista<T> noAuxiliar = refEntrada;
+        for(int i = 0; i < this.size(); i++){
+            strRetorno += "[No{conteudo=" + noAuxiliar.getConteudo() + "}]--->";
+            noAuxiliar = noAuxiliar.getProximoNo();
+        }
+        strRetorno += "null";
+
+        return strRetorno;
+    }
 }
