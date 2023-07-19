@@ -1,9 +1,9 @@
 package Listas;
 
-public class ListaCircular {
+public class ListaCircular <T>{
 
-    private noCircular primeiro;
-    private noCircular ultimo;
+    private noCircular<T> primeiro;
+    private noCircular<T> ultimo;
     private int tamanho;
 
     public ListaCircular(){
@@ -12,7 +12,12 @@ public class ListaCircular {
         this.tamanho = 0;
     }
 
-    private boolean isEmpty(){
-        return this.tamanho == 0;
+    private boolean isEmpty(){ // Verifica se a lista está vazia
+        return this.tamanho == 0 ? true : false;
+
+    }
+
+    public int size(){ // Retorna o tamanho da lista
+        return this.tamanho;
     }
 }
