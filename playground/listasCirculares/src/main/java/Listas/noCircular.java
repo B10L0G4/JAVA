@@ -24,10 +24,16 @@ public class noCircular <T> {
         this.primeiro = primeiro;
     }
 
+    public T getElemento() {
+        return elemento;
+    }
+
     @Override
     public String toString() {
         return "noCircular{" +
                 "elemento=" + elemento +
                 '}';
     }
+
+
 }
