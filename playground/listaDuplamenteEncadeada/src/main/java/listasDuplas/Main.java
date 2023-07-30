@@ -20,3 +20,5 @@ public class Main {
         System.out.println(minhaListaEncadeada.get(3));
     }
 }
+//TODO : incluir comentarios de explicação do código
+
